@@ -14,8 +14,7 @@
 ?>
 
 <?php
-	echo "<h2>My name is " . $yourName . " </h2>";	//concatenation - joining of multiple parts into a single string
-?>
+	echo "<h2>My name is " . $yourName . " </h2>";	
 <?php
 	$number1 = 2;		
 ?>
@@ -34,6 +33,12 @@
 	<?php $Languages = array("PHP", "HTML", "Javascript"); ?>
 
 	<?php echo "document.write( '<h3>$Languages[0] $Languages[1] $Languages[2]</h3>' );"; ?>
+	
+	<?php $new = "'PHP ', 'HTML ', 'Javascript'"; ?>
+
+	let langs = [<?php echo $new; ?>];
+
+	document.write(langs);
 	
 </script>
 
