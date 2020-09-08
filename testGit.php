@@ -1,2 +1,3 @@
+<?php
 $name = "Savanna Kohler";
-<?php echo $name; ?>
+ echo $name; ?>
