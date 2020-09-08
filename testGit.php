@@ -1,1 +1,2 @@
-<?php echo "Savanna Kohler" ?>
+$name = "Savanna Kohler";
+<?php echo $name ?>
