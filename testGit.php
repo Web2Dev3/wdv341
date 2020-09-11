@@ -1,9 +1,9 @@
-<<<<<<< HEAD
+
 <?php 
 $name = "Savanna Kohler";
-echo $name ?>
-=======
+echo $name . "<br>" ?>
+
 <?php
-$name = "Savanna Kohler";
- echo $name; ?>
->>>>>>> origin/master
+$name = "books";
+ echo "I love to read ", $name; ?>
+
