@@ -23,10 +23,11 @@ $num1 = 1234567890;
 return number_format($num1) . "<br>";
 }
 
-function printCurrency() {
-$num2 = 123456;
-return "$" . number_format($num2, 2) . " USD";
+function printCurrency($num2) {
+$formatter = new NumberFormatter('en_US', NumberFormatter::CURRENCY);
+return $formatter->formatCurrency($num2, 'USD');
 }
+
 ?>
 <?php echo dateFormat(); ?>
 
@@ -36,5 +37,6 @@ return "$" . number_format($num2, 2) . " USD";
 
 <?php echo printNum(); ?>
 
-<?php echo printCurrency(); ?>
+<?php echo printCurrency(123456); ?>
+
 
