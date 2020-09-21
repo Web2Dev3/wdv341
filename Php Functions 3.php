@@ -7,8 +7,8 @@ $date=date_create("2020-9-8");
 return date_format($date,"m/d/Y") . "<br>";
 }
 
-function dateInt() {
-$date=date_create("2020-9-8");
+function dateInt($inDate) {
+$date=date_create($inDate);
 return date_format($date,"d/m/Y") . "<br>";
 }
 
@@ -31,7 +31,7 @@ return $formatter->formatCurrency($num2, 'USD');
 ?>
 <?php echo dateFormat(); ?>
 
-<?php echo dateInt(); ?>
+<?php echo dateInt("2020-9-8"); ?>
 
 <?php echo characterCount($departmentName); ?>
 

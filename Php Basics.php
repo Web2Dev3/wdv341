@@ -23,7 +23,7 @@
 	$number2 = 4;		
 ?>
 <?php
-	$total = 6;		
+	$total = $number1 + $number2;		
 ?>
 
 <?php echo "<p>$number1</p>"; ?>
