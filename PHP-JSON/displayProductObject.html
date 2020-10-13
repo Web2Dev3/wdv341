@@ -7,14 +7,15 @@
 
 	function getProductObject() {
 
-		alert("insideGetProductObject()");
+		//alert("insideGetProductObject()");
 
 		var xmlhttp = new XMLHttpRequest();
 		xmlhttp.onreadystatechange = function() {
 		  if (this.readyState == 4 && this.status == 200) {
 			  console.log(this.responseText);
 			var myObj = JSON.parse(this.responseText);
-			document.getElementById("displayProduct").innerHTML = myObj.productName;
+			document.getElementById("displayProduct").innerHTML = "<br>" + myObj.productName + "<br>"
++ myObj.productPrice + "<br>" + myObj.productPageCount + "<br>" + myObj.productISBN;
 		  }
 		};
 		xmlhttp.open("GET", "deliverProduct.php", true);
