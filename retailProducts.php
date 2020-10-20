@@ -8,7 +8,7 @@
     require 'connectPDO.php';
 
 try {
-    $stmt = $conn->prepare("SELECT product_name, product_description, product_price, product_image, product_inStock, product_status FROM wdv341_products ORDER BY product_name DESC");
+    $stmt = $conn->prepare("SELECT product_name, product_description, product_price, product_image, product_inStock, product_status FROM wdv341_products ORDER By product_name DESC");
     $stmt->execute();
     $stmt->setFetchMode(PDO::FETCH_ASSOC);
 }
