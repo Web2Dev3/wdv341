@@ -14,14 +14,97 @@
 		  if (this.readyState == 4 && this.status == 200) {
 			  console.log(this.responseText);
 			var myObj = JSON.parse(this.responseText);
-			document.getElementById("displayProduct").innerHTML = "<br>" + myObj.productName + "<br>"
-+ myObj.productPrice + "<br>" + myObj.productPageCount + "<br>" + myObj.productISBN;
+			document.getElementById("displayProduct").innerHTML = "<br>" + myObj.student_id + "<br>" + 
+myObj.student_first_name + "<br>" + myObj.student_last_name + "<br>" + myObj.student_major + "<br>" + 
+myObj.student_credits + "<br>" + myObj.student_gpa + "<br>" + myObj.student_registration_date;
 		  }
 		};
-		xmlhttp.open("GET", "deliverProduct.php", true);
+		xmlhttp.open("GET", "900006361.js", true);
 		xmlhttp.send();		
 		
 	}
+
+	function getProductObject2() {
+
+		//alert("insideGetProductObject()");
+
+		var xmlhttp = new XMLHttpRequest();
+		xmlhttp.onreadystatechange = function() {
+		  if (this.readyState == 4 && this.status == 200) {
+			  console.log(this.responseText);
+			var myObj2 = JSON.parse(this.responseText);
+			document.getElementById("displayProduct2").innerHTML = "<br>" + myObj2.student_id + "<br>" + 
+myObj2.student_first_name + "<br>" + myObj2.student_last_name + "<br>" + myObj2.student_major + "<br>" + 
+myObj2.student_credits + "<br>" + myObj2.student_gpa + "<br>" + myObj2.student_registration_date;
+		  }
+		};
+		xmlhttp.open("GET", "900668871.js", true);
+		xmlhttp.send();		
+		
+	}
+	
+function getProductObject3() {
+
+		//alert("insideGetProductObject()");
+
+		var xmlhttp = new XMLHttpRequest();
+		xmlhttp.onreadystatechange = function() {
+		  if (this.readyState == 4 && this.status == 200) {
+			  console.log(this.responseText);
+			var myObj3 = JSON.parse(this.responseText);
+			document.getElementById("displayProduct3").innerHTML = "<br>" + myObj3.student_id + "<br>" + 
+myObj3.student_first_name + "<br>" + myObj3.student_last_name + "<br>" + myObj3.student_major + "<br>" + 
+myObj3.student_credits + "<br>" + myObj3.student_gpa + "<br>" + myObj3.student_registration_date;
+		  }
+		};
+		xmlhttp.open("GET", "903998004.js", true);
+		xmlhttp.send();		
+		
+	}
+
+function getData() {	
+
+		fetch("900006361.js")			
+		.then((resp) => resp.text()) 	
+		.then(function(data) {			
+			alert("data received and ready to process. data variable contains: " + data);
+			document.querySelector("#myDiv").innerHTML = data;	
+		})
+		.catch(function() {
+			alert("A problem has occurred!");
+		});
+
+	}
+
+function getData2() {	
+
+		fetch("900668871.js")			
+		.then((resp) => resp.text()) 	
+		.then(function(data) {			
+			alert("data received and ready to process. data variable contains: " + data);
+			document.querySelector("#myDiv2").innerHTML = data;	
+		})
+		.catch(function() {
+			alert("A problem has occurred!");
+		});
+
+	}
+
+function getData3() {	
+
+		fetch("903998004.js")			
+		.then((resp) => resp.text()) 	
+		.then(function(data) {			
+			alert("data received and ready to process. data variable contains: " + data);
+			document.querySelector("#myDiv3").innerHTML = data;	
+		})
+		.catch(function() {
+			alert("A problem has occurred!");
+		});
+
+	}
+
+
 
 
 
@@ -30,10 +113,36 @@
 </head>
 
 <body>
-<h1>WDV341 Intro PHP</h1>
-<h2>PHP-JSON-AJAX Example</h2>
-<p>This page will use AJAX to call for a PHP page on your server. The PHP page will create a JSON object and 'send' it back to this page where it will be consumed by the page and the contents displayed.</p>
-<p>Product Information: <span id="displayProduct"></span></p>
-<p><button onClick="getProductObject()">Display Product</button></p>
+<h1>WDV321 Advanced Javascript</h1>
+<h2>JSON-AJAX Example</h2>
+<p>Student Information: <span id="displayProduct"></span></p>
+<p><button onClick="getProductObject()">Display Object</button></p>
+
+<p>Student Information: <span id="displayProduct2"></span></p>
+<p><button onClick="getProductObject2()">Display Object 2</button></p>
+
+<p>Student Information: <span id="displayProduct3"></span></p>
+<p><button onClick="getProductObject3()">Display Object 3</button></p>
+
+
+<h2 id="myDiv"></h2>
+
+<p>
+	<button onclick="getData()">Fetch data object 1</button>
+</p>
+
+<h2 id="myDiv2"></h2>
+
+<p>
+	<button onclick="getData2()">Fetch data object 2</button>
+</p>
+
+<h2 id="myDiv3"></h2>
+
+<p>
+	<button onclick="getData3()">Fetch data object 3</button>
+</p>
+
+
 </body>
 </html>
