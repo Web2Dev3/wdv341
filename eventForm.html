@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>WDV341 Intro PHP - Event Form Example</title>
+<style>
+#test_name {
+    display: none;
+}
+
+body {
+background-color: aliceblue;
+color: navy;
+font-size: 1.1em;
+}
+
+#button, #button2 {
+background-color: navy;
+color: white;
+}
+</style>
+</head>
+
+<body>
+<h1>WDV341 Intro PHP</h1>
+
+<form id="form1" name="form1" method="post" action="">
+ <input id="test_name" name="testName" type="text" />
+  <p>Event Name: 
+    <input type="text" name="eventName" id="eventName" />
+</p>
+  <p>Event Description: 
+    <input type="text" name="eventDesc" id="eventDesc" />
+  </p>
+  <p>Event Presenter: 
+    <input type="text" name="pres" id="pres" />
+  </p>
+    <p>Event Date: 
+    <input type="date" name="date" id="date" />
+  </p>
+  <p>Event Time: 
+    <input type="time" name="time" id="time" />
+  </p>
+  <p>
+    <input type="submit" name="button" id="button" value="Submit" />
+    <input type="reset" name="button2" id="button2" value="Reset" />
+  </p>
+</form>
+
+<p>&nbsp;</p>
+</body>
+
+</html>
