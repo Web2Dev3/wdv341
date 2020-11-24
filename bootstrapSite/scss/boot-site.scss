@@ -1,0 +1,92 @@
+/* Scss Document */
+
+$new-style: 3px dotted maroon;
+$cool-color: #00621C;
+
+.container {
+  width: 100%;
+  margin: auto; }
+
+#floatEmail {
+width: 430px;
+height: 20px;
+}
+
+#floatName {
+width: 430px;
+height: 20px;
+}
+
+#floatMessage {
+width: 450px;
+height: 140px;
+}
+
+#button {
+width: 90px;
+height: 70px;
+background-color: $cool-color;
+border: $new-style;
+border-radius: 25px;
+color: white;
+margin-right: 60px;
+}
+
+#button2 {
+width: 90px;
+height: 70px;
+background-color: $cool-color;
+border: $new-style;
+border-radius: 25px;
+color: white;
+}
+
+h1 {
+          font-family: Georgia, serif;
+          color:green;
+          text-align: center;
+          padding: .5em;
+          margin: .5em;
+         }
+         
+         
+p {
+   font-family:Arial, Helvetica, sans-serif;
+   font-size:1.2em;
+   text-indent:20px;
+   line-height:1.5;
+   padding: .5em;
+   margin: .5em;
+   }        
+         
+nav a:hover  {
+          color: purple;
+          }          
+
+img {
+border: 2px solid green;
+}
+
+nav ul {
+  justify-content: center;
+  justify-content:space-around;
+  color: white;
+  padding: 20px;
+  text-decoration: none;
+  text-align: center;
+}
+
+li {
+	display:inline-block;
+	font-weight: bold;
+}
+
+div.c {
+  height: 420px;
+  padding-left: 10px;
+  border: 2px solid #00621C; }
+  
+.form {
+@extend div.c;
+font-weight: bolder;
+}
