@@ -1,0 +1,68 @@
+/* Scss Document */
+.container {
+  width: 100%;
+  margin: auto; }
+
+#floatEmail {
+  width: 90%;
+  height: 10%; }
+
+#floatName {
+  width: 90%;
+  height: 10%; }
+
+#floatMessage {
+  width: 90%;
+  height: 20%; }
+
+#button {
+  padding-bottom: 10px;
+  border-radius: 25px;
+  color: white;
+  margin-right: .5em; }
+
+#button2 {
+  padding-bottom: 10px;
+  border-radius: 25px;
+  color: white; }
+
+
+h1 {
+  font-family: Georgia, serif;
+  color: green;
+  text-align: center;
+  padding: .5em;
+  margin: .5em; }
+  
+
+p {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.2em;
+  text-indent: 20px;
+  line-height: 1.5;
+  padding: .5em;
+  margin: .5em; }
+
+nav a:hover {
+  background-color: darkslateblue;
+  border: 3px solid cornsilk;
+  color: purple; }
+
+img {
+  border: 2px solid green; }
+
+nav ul {
+  font-weight: bold;
+  justify-content: center;
+  justify-content: space-around;
+  padding: 20px;
+  text-decoration: none;
+  text-align: center; }
+
+li {
+  display: inline-block;
+  font-weight: bold; }
+
+div.c {
+  padding-left: 10px;
+  border: 2px solid #00621C; }
