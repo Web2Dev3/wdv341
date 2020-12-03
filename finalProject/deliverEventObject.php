@@ -3,7 +3,7 @@
     require 'connectPDO.php';
 
 try {
-    $stmt = $conn->prepare("SELECT discount, code_name, date_expires FROM wdv341_promo WHERE id=1");
+    $stmt = $conn->prepare("SELECT discount, promo_price, code_name, date_expires FROM wdv341_promo WHERE id=1");
     $stmt->execute();
     $stmt->setFetchMode(PDO::FETCH_ASSOC);
 }
@@ -19,6 +19,7 @@ $newDate = date("m-d-Y", strtotime($orgDate));
 $outputObj = new stdClass();
 
 	$outputObj->promoDiscount = $row['discount'];
+	$outputObj->promoPrice = $row['promo_price'];
 	$outputObj->promoCode = $row['code_name'];
 	$outputObj->expireDate = $newDate;
 //
