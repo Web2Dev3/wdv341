@@ -3,7 +3,7 @@
     require 'connectPDO.php';
 
 try {
-    $stmt = $conn->prepare("SELECT product_name, product_description, product_price, product_image, product_inventory, product_description, product_special FROM wdv341_final");
+    $stmt = $conn->prepare("SELECT product_name, product_description, product_price, product_image, product_inventory, product_category, product_special FROM wdv341_final");
     $stmt->execute();
     $stmt->setFetchMode(PDO::FETCH_ASSOC);
 }
@@ -114,7 +114,7 @@ var xmlhttp = new XMLHttpRequest();
 			  console.log(this.responseText);
 			var myObj = JSON.parse(this.responseText);
 			document.getElementById("promo").innerHTML = "Use the code " + myObj.promoCode + " for "
-+ myObj.promoDiscount + " off! Expires " + myObj.expireDate + ".";
++ myObj.promoDiscount + " off purchases of $" + myObj.promoPrice + "! Expires " + myObj.expireDate + ".";
 		  }
 		};
 		xmlhttp.open("GET", "deliverEventObject.php", true);
@@ -208,6 +208,7 @@ else {
 		<p class="productPrice">$<?php echo $row['product_price'];?></p>
 		<p class="<?php echo $designClass;?>"><?php echo $row['product_special'];?></p>
 		<p class="<?php echo $design;?>"><?php echo $row['product_inventory'];?> In Stock</p>
+		<p class="productName">Category: <?php echo $row['product_category'];?></p>
 		<button>Buy Now!</button><br>
 	</div>
 <?php
