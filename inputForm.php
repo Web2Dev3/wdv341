@@ -20,7 +20,8 @@
 	{	
 		//The form has been submitted and needs to be processed
 		if(isset($_POST["test_name"])) {
-			header('Location: https://www.google.com');
+			header('Location: https://www.google.com/');
+			exit;
 		}
 		
 		//Validate the form data here!
@@ -232,7 +233,7 @@ color: white;
         ?>
             <h1><?php echo $message ?></h1>
 <form id="form1" name="form1" method="post" action="inputForm.php">
- <input id="test_name" name="testName" type="text" />
+   <input type="radio" class="form-check-input" name="test_name" id="test_name" value="test">
   <p>Event Name: 
     <input type="text" name="eventName" id="eventName" value="<?php echo $event_name;  ?>"/>
     <span class="errMsg"> <?php echo $eventNameErrMsg; ?></span>
@@ -266,7 +267,7 @@ color: white;
         ?>
     	
 <form id="form1" name="form1" method="post" action="inputForm.php">
- <input id="test_name" name="testName" type="text" />
+   <input type="radio" class="form-check-input" name="test_name" id="test_name" value="test">
   <p>Event Name: 
     <input type="text" name="eventName" id="eventName" value="<?php echo $event_name;  ?>"/>
     <span class="errMsg"> <?php echo $eventNameErrMsg; ?></span>
