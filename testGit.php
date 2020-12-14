@@ -5,5 +5,5 @@ echo $name . "<br>" ?>
 
 <?php
 $name = "books";
- echo "I love to read ", $name; ?>
+ echo "I really enjoy reading ", $name; ?>
 
