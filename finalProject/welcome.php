@@ -65,6 +65,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
     </div>
     </div>
     <div class="col-lg-12">
+	        <p><a href="upload.php">Click here</a> to upload an image.</p>   
     <p>
     	<a href="index.html" class="btn btn-danger">Return to Main Site</a>
         <a href="logout.php" class="btn btn-danger">Sign Out of Your Account</a>

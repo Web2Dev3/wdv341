@@ -525,19 +525,19 @@ background-size: cover;
         	<fieldset>
    
              <p>Product Name: 
-    <input type="text" name="eventName" id="eventName" value="<?php echo $prod_name;  ?>"/>
+    <input type="text" name="eventName" id="eventName" value="<?php echo $prod_name;  ?>" required/>
     <span class="errMsg"> <?php echo $eventNameErrMsg; ?></span>
 </p>
   <p>Product Description: 
-    <input type="text" name="eventDesc" id="eventDesc" value="<?php echo $prod_description;  ?>"/>
+    <input type="text" name="eventDesc" id="eventDesc" value="<?php echo $prod_description;  ?>" required/>
     <span class="errMsg"> <?php echo $eventDescErrMsg; ?></span>
   </p>
   <p>Product Price: 
-    <input type="text" name="price" id="price" value="<?php echo $prod_price;  ?>"/>
+    <input type="text" name="price" id="price" value="<?php echo $prod_price;  ?>" required/>
     <span class="errMsg"> <?php echo $priceErrMsg; ?></span>
   </p>
   <p>Product Image: 
-    <input type="text" name="img" id="img" value="<?php echo $prod_image;  ?>"/>
+    <input type="text" name="img" id="img" value="<?php echo $prod_image;  ?>" required/>
     <span class="errMsg"> <?php echo $imgErrMsg; ?></span>
   </p>
     <p>Product Tax: 
@@ -553,7 +553,7 @@ background-size: cover;
     <span class="errMsg"> <?php echo $sellerErrMsg; ?></span>
   </p>
   <p>Product Category: 
-    <input type="text" name="cat" id="cat" value="<?php echo $prod_category;  ?>"/>
+    <input type="text" name="cat" id="cat" value="<?php echo $prod_category;  ?>" required/>
     <span class="errMsg"> <?php echo $categoryErrMsg; ?></span>
   </p>
     <p>Product Special Message(optional): 
@@ -564,7 +564,7 @@ background-size: cover;
     <span class="errMsg"> <?php echo $dateErrMsg; ?></span>
   </p>
   <p>Product Inventory: 
-    <input type="number" name="number" id="number" value="<?php echo $prod_inventory;  ?>"/>
+    <input type="number" name="number" id="number" value="<?php echo $prod_inventory;  ?>" required/>
     <span class="errMsg"> <?php echo $inventoryErrMsg; ?></span>
   </p>
                        

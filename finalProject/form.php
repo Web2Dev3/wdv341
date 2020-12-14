@@ -26,6 +26,7 @@ Date: March 12th 2020-->
 	$userName = "";
 	$userEmail = "";	 
 	$userMessage = "";
+	$remenber = "";
 	$emailErrMsg = "";
 	$firstNameErrMsg = "";	
 
@@ -37,6 +38,11 @@ Date: March 12th 2020-->
 	$userName = $_POST['floatName'];
 	$userEmail = $_POST['floatEmail'];
 	$userMessage = $_POST['floatMessage'];
+	
+		if(isset($_POST['remember']))
+		{
+			$remember = "Remember Me";
+		}
 	function validateEmail($inEmail)
 			{
 				global $validForm, $emailErrMsg;			//Use the GLOBAL Version of these variables instead of making them local
@@ -81,7 +87,7 @@ Date: March 12th 2020-->
 		{
 		$to = "kohlersavanna5@gmail.com";
 		$subject = "Email from my website";
-		$body = "Information Submitted by ".$userName.".\n\n".$userMessage;
+		$body = "Information Submitted by ".$userName.".\n\n".$userMessage."\n\n".$remember;
 		
 		$headers = "From: contact@savannakohler.com";
 		
@@ -201,6 +207,9 @@ color:white;
                       <label for="floatMessage" style="background-color:#00621C; padding-right: 0.9em;">MESSAGE</label>
                       <textarea name="floatMessage" id="floatMessage"></textarea>
                     </p>
+                    <p>   <input type="checkbox" name="remember" value="Remember Me">
+ 			  <label for="remember">Remember Me</label>
+ 		   </p>
                     <p>
                       <input type="submit" name="button" id="button" value="Submit">
                       <input type="reset" name="button2" id="button2" value="Reset">
